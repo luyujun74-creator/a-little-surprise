@@ -1,0 +1,893 @@
+HELLO-TEST
+line2<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0a16">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="给芷沅小姐姐的下班小惊喜：一点星光，一点温柔，一点不讲道理的偏爱。">
+<meta property="og:title" content="给芷沅小姐姐的下班小惊喜">
+<meta property="og:description" content="今天辛苦了。这里不讲道理，只负责让你轻松一点点。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0a16'/%3E%3Cpath d='M40 14a20 20 0 1 0 12 34A22 22 0 0 1 40 14z' fill='%23ffd0a0'/%3E%3Ccircle cx='19' cy='20' r='2' fill='%23fff0dc'/%3E%3Ccircle cx='26' cy='46' r='1.6' fill='%23ffc0d4'/%3E%3C/svg%3E">
+<title>给芷沅小姐姐的下班小惊喜</title>
+<style>
+:root{
+  color-scheme: dark;
+  --ink: rgba(255,248,240,.94);
+  --ink-soft: rgba(255,246,236,.78);
+  --ink-dim: rgba(255,244,232,.56);
+  --line: rgba(255,225,190,.16);
+  --line-strong: rgba(255,225,190,.30);
+  --glass: rgba(255,238,220,.065);
+  --glass-2: rgba(255,238,220,.10);
+  --amber: 255,196,128;
+  --rose: 255,160,190;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{
+  margin:0;
+  overflow:hidden;
+  background:#0b0a16;
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",Roboto,sans-serif;
+  font-size:15px;
+  line-height:1.7;
+  letter-spacing:.2px;
+}
+button{font:inherit}
+
+/* ---------- 背景 ---------- */
+#sky{position:fixed;top:0;left:0;right:0;bottom:0;z-index:0;display:block}
+.aurora{
+  position:fixed;top:-30vh;left:-30vw;right:-30vw;bottom:-30vh;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(780px 560px at 14% 16%, rgba(255,168,110,.16), transparent 62%),
+    radial-gradient(820px 600px at 86% 22%, rgba(255,132,178,.14), transparent 62%),
+    radial-gradient(900px 700px at 52% 96%, rgba(140,190,255,.10), transparent 66%),
+    radial-gradient(600px 400px at 50% 50%, rgba(255,214,170,.05), transparent 70%);
+  animation:drift 16s ease-in-out infinite;
+}
+.vignette{
+  position:fixed;top:0;left:0;right:0;bottom:0;z-index:1;pointer-events:none;
+  background:radial-gradient(120% 90% at 50% 40%, transparent 40%, rgba(6,5,14,.62) 100%);
+}
+
+/* ---------- 布局 ---------- */
+.stage{
+  position:relative;z-index:2;height:100%;overflow-y:auto;-webkit-overflow-scrolling:touch;
+  display:flex;align-items:center;justify-content:center;
+  padding:calc(20px + env(safe-area-inset-top)) 16px calc(24px + env(safe-area-inset-bottom));
+}
+.card{
+  width:100%;max-width:600px;
+  padding:22px 20px 18px;
+  border:1px solid var(--line);
+  border-radius:26px;
+  background:linear-gradient(168deg, rgba(255,236,214,.085), rgba(255,225,205,.035));
+  box-shadow:0 24px 80px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,235,215,.10);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  animation:rise .9s cubic-bezier(.2,.9,.25,1) both;
+}
+
+/* ---------- 头部 ---------- */
+.head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.greet{margin:0;font-size:13px;font-weight:400;color:var(--ink-dim);letter-spacing:1.2px}
+.clock{font-size:12px;color:var(--ink-dim);white-space:nowrap;font-variant-numeric:tabular-nums}
+.name{
+  margin:10px 0 2px;
+  font-size:38px;line-height:1.15;font-weight:600;letter-spacing:4px;
+  background:linear-gradient(100deg,#fff3e2 0%,#ffd8b0 42%,#ffc3d6 72%,#fff3e2 100%);
+  background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  filter:drop-shadow(0 0 22px rgba(255,190,140,.32));
+  animation:shine 7s ease-in-out infinite, rise 1s .1s cubic-bezier(.2,.9,.25,1) both;
+}
+.kicker{margin:0 0 2px;font-size:13px;color:var(--ink-dim);letter-spacing:2px}
+
+/* ---------- 信 ---------- */
+.letter{
+  position:relative;margin:16px 0 4px;padding:16px 16px 14px;
+  border:1px solid var(--line);border-radius:18px;
+  background:linear-gradient(160deg, rgba(255,228,200,.07), rgba(255,210,190,.02));
+}
+.letter::before{
+  content:"";position:absolute;left:16px;top:-1px;width:52px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg, rgba(var(--amber),.85), rgba(var(--rose),.35), transparent);
+}
+.letter p{margin:0 0 8px;font-size:14.5px;color:var(--ink-soft)}
+.letter p:last-child{margin-bottom:0}
+.letter .strong{color:var(--ink)}
+.caret{display:inline-block;width:2px;height:1em;margin-left:2px;vertical-align:-2px;
+  background:rgba(var(--amber),.9);animation:blink 1s steps(1) infinite}
+
+/* ---------- 按钮 ---------- */
+.ask{margin:18px 0 10px;font-size:13px;color:var(--ink-dim);letter-spacing:.6px}
+.moods{display:flex;flex-wrap:wrap;gap:9px}
+.chip{
+  padding:9px 13px;border:1px solid var(--line);border-radius:14px;
+  background:var(--glass);color:var(--ink);font-size:14px;cursor:pointer;
+  transition:transform .12s ease,background .22s ease,border-color .22s ease,box-shadow .22s ease;
+}
+.chip:hover{background:var(--glass-2);border-color:var(--line-strong)}
+.chip:active{transform:translateY(1px) scale(.985)}
+.chip[aria-pressed="true"]{
+  background:linear-gradient(120deg, rgba(var(--amber),.20), rgba(var(--rose),.14));
+  border-color:rgba(var(--amber),.42);
+  box-shadow:0 0 0 1px rgba(var(--amber),.12), 0 8px 24px rgba(255,170,120,.14);
+}
+.chip:focus-visible{outline:2px solid rgba(255,210,170,.85);outline-offset:3px}
+.chip[disabled]{opacity:.5;cursor:default}
+.chip.gold{
+  background:linear-gradient(120deg, rgba(var(--amber),.24), rgba(var(--rose),.18));
+  border-color:rgba(var(--amber),.40);
+}
+
+/* ---------- 回应区 ---------- */
+.reply{
+  position:relative;overflow:hidden;
+  margin-top:14px;padding:16px 15px;min-height:120px;
+  border:1px solid var(--line);border-radius:18px;
+  background:rgba(8,6,16,.42);
+}
+.reply h2{margin:0 0 8px;font-size:15.5px;font-weight:600;letter-spacing:.6px}
+.reply p{margin:0 0 7px;font-size:14.5px;color:var(--ink-soft)}
+.reply p:last-child{margin-bottom:0}
+.reply .warm{color:rgba(255,214,176,.92)}
+.fade{animation:fade .5s ease both}
+
+/* ---------- 呼吸 ---------- */
+.breath{display:none;align-items:center;gap:14px;margin-top:14px}
+.breath.on{display:flex}
+.orb{
+  position:relative;flex:0 0 auto;width:74px;height:74px;border-radius:50%;
+  background:radial-gradient(circle at 38% 34%, rgba(255,226,190,.95), rgba(255,170,120,.42) 46%, rgba(255,140,170,.12) 72%, transparent 78%);
+  box-shadow:0 0 34px rgba(255,180,130,.34);
+  transform:scale(.72);
+  transition:transform 1s ease-in-out;
+}
+.breath-text{font-size:14px;color:var(--ink-soft)}
+.breath-text b{display:block;font-size:16px;color:var(--ink);font-weight:600;letter-spacing:1px}
+.breath-text small{display:block;margin-top:2px;font-size:12px;color:var(--ink-dim)}
+
+/* ---------- 底部 ---------- */
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:16px}
+.tip{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--ink-dim)}
+.dot{width:5px;height:5px;border-radius:50%;background:rgba(var(--amber),.85);box-shadow:0 0 8px rgba(var(--amber),.6)}
+.sign{margin:16px 0 0;padding-top:12px;border-top:1px solid rgba(255,225,190,.10);
+  font-size:12.5px;color:var(--ink-dim);display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.link{padding:0;border:0;background:none;color:rgba(255,214,176,.80);font-size:12.5px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.link:active{opacity:.7}
+
+/* ---------- 覆盖层 / 提示 ---------- */
+.flash{position:fixed;top:0;left:0;right:0;bottom:0;z-index:5;pointer-events:none;opacity:0;
+  background:radial-gradient(1100px 760px at 50% 44%, rgba(255,220,180,.10), rgba(4,3,10,.66));
+  transition:opacity .45s ease}
+.flash.on{opacity:1}
+.toast{position:fixed;z-index:6;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));
+  padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(10,8,18,.78);
+  font-size:12.5px;color:var(--ink);opacity:0;pointer-events:none;transform:translateX(-50%) translateY(6px);
+  transition:opacity .28s ease,transform .28s ease;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@keyframes drift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(1.6vw,-1.2vh,0) scale(1.04)}}
+@keyframes shine{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+
+@media (max-width:520px){
+  .stage{align-items:flex-start;padding-left:13px;padding-right:13px}
+  .card{padding:18px 16px 16px;border-radius:22px}
+  .name{font-size:32px;letter-spacing:3px}
+  .chip{padding:8px 11px;font-size:13.5px}
+  .reply{min-height:132px}
+  .orb{width:64px;height:64px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"></div>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+<div class="flash" id="flash" aria-hidden="true"></div>
+
+<main class="stage">
+  <section class="card" id="card">
+    <div class="head">
+      <p class="greet" id="greet">晚上好呀</p>
+      <time class="clock" id="clock"></time>
+    </div>
+
+    <p class="kicker">这是一封只写给一个人的</p>
+    <h1 class="name" id="name">芷沅小姐姐</h1>
+
+    <div class="letter" id="letter" aria-live="polite"></div>
+
+    <p class="ask">先说说，你现在是哪一种？<span style="opacity:.7">（不用解释，我默认你已经尽力了）</span></p>
+    <div class="moods" id="moods">
+      <button class="chip" type="button" data-mood="tired">我很累</button>
+      <button class="chip" type="button" data-mood="hungry">我很饿</button>
+      <button class="chip" type="button" data-mood="lazy">只想摆烂</button>
+      <button class="chip" type="button" data-mood="praise">想被夸一下</button>
+      <button class="chip" type="button" data-mood="upset">有点委屈</button>
+      <button class="chip" type="button" data-mood="okay">今天还行</button>
+    </div>
+
+    <div class="reply" id="reply">
+      <h2>今天辛苦啦，芷沅小姐姐 🌙</h2>
+      <p>这个页面不讲道理，也不给建议，只负责一件事：<span class="warm">让你轻松一点点。</span></p>
+      <p>上面随便点一个，我陪你把这一天，好好地关掉。</p>
+    </div>
+
+    <div class="breath" id="breath">
+      <div class="orb" id="orb"></div>
+      <div class="breath-text">
+        <b id="breathPhase">准备好了吗</b>
+        <span id="breathHint">跟着这颗小星星，一起呼吸一次</span>
+        <small id="breathCount"></small>
+      </div>
+    </div>
+
+    <div class="foot">
+      <button class="chip gold" type="button" id="egg">✨ 点我出彩蛋</button>
+      <button class="chip" type="button" id="more">再来一句</button>
+      <span class="tip"><span class="dot"></span>轻触屏幕，会有星光</span>
+    </div>
+
+    <div class="sign">
+      <span>来自一个希望你今天轻松点的人</span>
+      <span>
+        <button class="link" type="button" id="copy">复制链接</button>
+        <span style="opacity:.35"> · </span>
+        <button class="link" type="button" id="motion">开启重力感应</button>
+      </span>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ========== 基础工具 ========== */
+var sleep = function(ms){ return new Promise(function(r){ setTimeout(r, ms); }); };
+var rand  = function(a,b){ return a + Math.random()*(b-a); };
+var pick  = function(list){ return list[Math.floor(Math.random()*list.length)]; };
+var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function clean(v){
+  var t = (v === null || v === undefined) ? "" : String(v);
+  t = t.replace(/[\u200B-\u200F\uFEFF\u2028\u2029<>&"']/g, "").trim();
+  return t.length > 16 ? t.slice(0,16) : t;
+}
+
+/* 名字：默认写死给芷沅，也允许 ?name= 换人 */
+var params = new URLSearchParams(window.location.search);
+var NAME = clean(params.get("name")) || "芷沅小姐姐";
+var SHORT = NAME.replace(/(小姐姐|姐姐|小姐|女士)$/,"") || NAME;
+document.getElementById("name").textContent = NAME;
+document.title = "给" + NAME + "的下班小惊喜";
+
+/* ========== 时间感知问候 ========== */
+var greetEl = document.getElementById("greet");
+var clockEl = document.getElementById("clock");
+function hourGreeting(h){
+  if (h < 5)  return { hi:"这么晚还醒着呀", note:"再撑一会儿就去睡，好不好" };
+  if (h < 9)  return { hi:"早安", note:"今天先不着急，慢慢来" };
+  if (h < 12) return { hi:"上午好", note:"记得抬头喝口水" };
+  if (h < 14) return { hi:"中午好", note:"吃饭比什么都重要" };
+  if (h < 18) return { hi:"下午好", note:"最难熬的那段快过去了" };
+  if (h < 22) return { hi:"晚上好呀", note:"下班了就别再想工作啦" };
+  return { hi:"夜深了", note:"这个点还在忙的话，真的辛苦了" };
+}
+function tickClock(){
+  var now = new Date();
+  var w = ["周日","周一","周二","周三","周四","周五","周六"][now.getDay()];
+  var mm = now.getMinutes(); if (mm < 10) mm = "0" + mm;
+  clockEl.textContent = (now.getMonth()+1) + "月" + now.getDate() + "日 " + w + " · " + now.getHours() + ":" + mm;
+}
+var G = hourGreeting(new Date().getHours());
+greetEl.textContent = G.hi;
+tickClock();
+setInterval(tickClock, 20000);
+
+/* ========== 手写信（逐字） ========== */
+var letterEl = document.getElementById("letter");
+var LETTER = [
+  { text: SHORT + "，", cls:"strong" },
+  { text: G.note + "。" },
+  { text: "今天也辛苦了。先别急着复盘哪里没做好——你把一整天完完整整地扛下来了，这件事本身就很了不起。" },
+  { text: "接下来的这一小段时间，不属于任何人，只属于你。", cls:"strong" }
+];
+function typeLine(node, text, speed){
+  return new Promise(function(done){
+    if (reduceMotion){ node.textContent = text; done(); return; }
+    var caret = document.createElement("span");
+    caret.className = "caret";
+    node.appendChild(caret);
+    var i = 0;
+    (function step(){
+      if (i >= text.length){ if (caret.parentNode) caret.parentNode.removeChild(caret); done(); return; }
+      caret.insertAdjacentText("beforebegin", text.charAt(i));
+      i++;
+      setTimeout(step, speed + (Math.random()*18));
+    })();
+  });
+}
+(function writeLetter(){
+  var idx = 0;
+  (function next(){
+    if (idx >= LETTER.length) return;
+    var item = LETTER[idx++];
+    var p = document.createElement("p");
+    if (item.cls) p.className = item.cls;
+    letterEl.appendChild(p);
+    typeLine(p, item.text, idx === 1 ? 90 : 34).then(function(){ setTimeout(next, 260); });
+  })();
+})();
+
+/* ========== 心情回应 ========== */
+var MOODS = {
+  tired: {
+    title: "收到，你很累。",
+    lines: [
+      "那今天就别再对自己严格了，一句都不许。",
+      "你不是效率低，你是电量到底了——人不是充电宝，撑到现在已经很猛。",
+      "累是身体在替你说话：够了，今天到这里。"
+    ],
+    after: [
+      "现在做一件超小的事就行：洗把脸 / 喝口热的 / 躺平三分钟。",
+      "把手机音量调小一点，世界会立刻变乖一点。",
+      "所有烦人的事统一打包，署名『明天的" + SHORT + "』——她比现在的你有力气。"
+    ],
+    end: "今晚早点睡，明天的事明天再说。"
+  },
+  hungry: {
+    title: "收到，你很饿。",
+    lines: [
+      "饿的时候别谈人生，先谈碳水。",
+      "很多所谓的『心情不好』，热乎饭下肚就好了一大半。",
+      "别再『等忙完再吃』了，胃可不会体谅你的 deadline。"
+    ],
+    after: [
+      "建议：热的、香的、带点油脂的，幸福来得最快。",
+      "懒得做饭完全没问题，外卖是成年人的正当回血手段。",
+      "吃完记得夸自己一句：我真会照顾我自己。"
+    ],
+    end: "先把自己喂饱，剩下的事都好商量。"
+  },
+  lazy: {
+    title: "收到，你只想摆烂。",
+    lines: [
+      "批准。摆烂是高强度工作的合理售后服务。",
+      "你不是不上进，你只是在恢复系统，请勿打扰。",
+      "今日 KPI 已更新为：活着 + 不生气。完成度 100%。"
+    ],
+    after: [
+      "找个最舒服的姿势，两分钟内什么都不做，这也算一种正经事。",
+      "要刷手机也行，但请只刷让你笑出声的那种。",
+      "任何想内耗的念头，请排队，明天九点再受理。"
+    ],
+    end: "今天允许你什么都不产出，你本人就是产出。"
+  },
+  praise: {
+    title: "收到，你想被夸一下。",
+    lines: [
+      "那我认真夸：能一路撑到现在，还愿意对人温和，这真的很了不起。",
+      "你做事靠谱得让人放心，而且从来不用大声嚷嚷。",
+      "别人看到的是你把事情办成了，我想说的是——你办成的时候，也在硬扛。"
+    ],
+    after: [
+      "幽默版补一句：今天所有难题都被你『劝退』了。",
+      "你不需要证明什么，你已经被看见了。",
+      "你值得的不只是『做得不错』，是『你辛苦了，去休息吧』。"
+    ],
+    end: SHORT + "，你比你以为的更好。"
+  },
+  upset: {
+    title: "收到，你有点委屈。",
+    lines: [
+      "那就先不讲道理，也不急着懂事。委屈就是委屈，它成立。",
+      "你已经很克制了。忍住没发作，不代表你没受伤。",
+      "不用非要找出『我哪里做错了』——有时候真的不是你的问题。"
+    ],
+    after: [
+      "如果眼眶有点热，那就让它热一会儿，没人在看。",
+      "现在只做让自己舒服的选择，不用考虑合不合适。",
+      "明天再决定要不要计较，今晚先站在自己这一边。"
+    ],
+    end: "站在你这边的人，比你想的多。"
+  },
+  okay: {
+    title: "收到，今天还行。",
+    lines: [
+      "那真好。『还行』这两个字，已经是很多个日子的高分了。",
+      "平稳地过完一天，本身就是一种很厉害的能力。",
+      "不用非得精彩，安稳的日子最值得被记住。"
+    ],
+    after: [
+      "趁着状态不错，做点纯粹让自己开心的小事。",
+      "把今天顺利的地方悄悄记一笔，以后难的时候可以翻出来看。",
+      "别急着给明天加码，让『还行』多留一会儿。"
+    ],
+    end: "愿你这样的日子，能多一些。"
+  }
+};
+
+var replyEl  = document.getElementById("reply");
+var breathEl = document.getElementById("breath");
+var orbEl    = document.getElementById("orb");
+var phaseEl  = document.getElementById("breathPhase");
+var hintEl   = document.getElementById("breathHint");
+var countEl  = document.getElementById("breathCount");
+var chips    = [].slice.call(document.querySelectorAll("[data-mood]"));
+var busy = false, skipBreath = false;
+
+function scrollIntoView(el){
+  try {
+    if (window.innerWidth > 640) return;
+    var r = el.getBoundingClientRect();
+    if (r.bottom > window.innerHeight - 8 || r.top < 0){
+      el.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+    }
+  } catch(e){}
+}
+function render(html){
+  replyEl.innerHTML = html;
+  replyEl.classList.remove("fade");
+  void replyEl.offsetWidth;
+  replyEl.classList.add("fade");
+}
+function esc(s){ return String(s).replace(/[&<>]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c]; }); }
+
+function twoDistinct(list){
+  var a = pick(list), b = pick(list), guard = 0;
+  while (b === a && guard++ < 8) b = pick(list);
+  return [a, b];
+}
+
+var PHASES = [
+  { label:"吸气", hint:"把肩膀放下来", dur:4000, scale:1.06 },
+  { label:"停一下", hint:"什么都不用想", dur:2000, scale:1.06 },
+  { label:"呼气", hint:"把今天慢慢呼出去", dur:6000, scale:.70 }
+];
+function runBreath(){
+  return new Promise(function(done){
+    breathEl.classList.add("on");
+    skipBreath = false;
+    if (reduceMotion){
+      phaseEl.textContent = "深呼吸一次";
+      hintEl.textContent = "吸气 4 秒 · 停 2 秒 · 呼气 6 秒";
+      countEl.textContent = "";
+      setTimeout(done, 900);
+      return;
+    }
+    var i = 0;
+    (function nextPhase(){
+      if (skipBreath || i >= PHASES.length){ countEl.textContent = ""; done(); return; }
+      var p = PHASES[i++];
+      phaseEl.textContent = p.label;
+      hintEl.textContent  = p.hint;
+      orbEl.style.transitionDuration = (p.dur/1000) + "s";
+      orbEl.style.transform = "scale(" + p.scale + ")";
+      var left = Math.round(p.dur/1000);
+      countEl.textContent = left + "s（点这里可以跳过）";
+      var timer = setInterval(function(){
+        left--;
+        countEl.textContent = (left > 0 ? left + "s（点这里可以跳过）" : "");
+        if (left <= 0) clearInterval(timer);
+      }, 1000);
+      setTimeout(function(){ clearInterval(timer); nextPhase(); }, p.dur);
+    })();
+  });
+}
+breathEl.addEventListener("click", function(){ skipBreath = true; });
+
+function choose(mood){
+  if (busy) return;
+  busy = true;
+  chips.forEach(function(c){
+    c.disabled = true;
+    c.setAttribute("aria-pressed", c.getAttribute("data-mood") === mood ? "true" : "false");
+  });
+  var m = MOODS[mood];
+  var two = twoDistinct(m.lines);
+  render(
+    '<h2>' + esc(m.title) + '</h2>' +
+    '<p>' + esc(two[0]) + '</p>' +
+    '<p>' + esc(two[1]) + '</p>' +
+    '<p class="warm">先陪你做一次呼吸，只要十二秒。</p>'
+  );
+  haptic(12);
+  setTimeout(function(){ scrollIntoView(breathEl.classList.contains('on') ? breathEl : replyEl); }, 120);
+  runBreath().then(function(){
+    breathEl.classList.remove("on");
+    orbEl.style.transitionDuration = "1s";
+    orbEl.style.transform = "scale(.72)";
+    var pair = twoDistinct(m.after);
+    render(
+      '<h2>' + esc(m.title.replace("收到，","")) + '</h2>' +
+      '<p>' + esc(pair[0]) + '</p>' +
+      '<p>' + esc(pair[1]) + '</p>' +
+      '<p class="warm">' + esc(m.end) + '</p>'
+    );
+    softBurstAtCard(34);
+    haptic(18);
+    chips.forEach(function(c){ c.disabled = false; });
+    busy = false;
+  });
+}
+chips.forEach(function(c){
+  c.addEventListener("click", function(){ choose(c.getAttribute("data-mood")); });
+});
+
+/* ========== 再来一句 ========== */
+var QUOTES = [
+  "你今天已经做得够多了，剩下的交给明天。",
+  "允许自己慢下来，这不叫落后，叫续航。",
+  "不是所有努力都要被看见才算数，我看见了。",
+  "你不需要一直坚强，偶尔靠一下也没关系。",
+  "把『我应该』换成『我可以』，肩膀会轻很多。",
+  "今天没做完的事，明天也还在，别急。",
+  "你值得一顿好饭、一场好觉，和一次没有愧疚感的休息。",
+  "不必把所有人的情绪都接住，你也需要被接住。",
+  "你已经是很多人心里靠得住的那一个了，也请对自己好一点。",
+  "难过的时候不用马上振作，先允许它发生。",
+  "别人怎么评价是别人的事，你怎么对自己才是正事。",
+  "如果今天什么都没做成，那你至少熬过了今天，这也很了不起。",
+  "生活不是考试，没有标准答案，也没人给你扣分。",
+  "你不是运气差，你只是还没轮到那份好运。",
+  "喜欢的事哪怕只做五分钟，也算今天没白过。",
+  "身体发出的信号别忽略，它比你诚实。",
+  "你可以有情绪，情绪不会让你显得不专业，只会让你显得是个人。",
+  "把今天的自己交给热水澡和被子，这是成年人最高效的修复。",
+  "你已经很努力地在做一个好人了，别再苛责自己。",
+  "愿你今晚睡得沉，明早醒来觉得世界还行。"
+];
+var lastQuote = -1;
+document.getElementById("more").addEventListener("click", function(){
+  var i = Math.floor(Math.random()*QUOTES.length), guard = 0;
+  while (i === lastQuote && guard++ < 6) i = Math.floor(Math.random()*QUOTES.length);
+  lastQuote = i;
+  render(
+    '<h2>送你一句</h2>' +
+    '<p class="warm" style="font-size:16px;line-height:1.8">' + esc(QUOTES[i]) + '</p>' +
+    '<p style="opacity:.65;font-size:13px">不满意的话，可以一直点，直到点到你喜欢的那句。</p>'
+  );
+  softBurstAtCard(18);
+  haptic(10);
+  scrollIntoView(replyEl);
+});
+
+/* ========== 星空引擎 ========== */
+var canvas = document.getElementById("sky");
+var ctx = canvas.getContext("2d");
+var W = 0, H = 0, DPR = 1;
+var stars = [], flies = [], sparks = [], trails = [];
+var px = 0, py = 0, running = true;
+var WARM = ["255,236,214","255,206,160","255,176,190","214,214,255","255,246,232"];
+
+function resize(){
+  DPR = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+  W = document.documentElement.clientWidth  || window.innerWidth;
+  H = document.documentElement.clientHeight || window.innerHeight;
+  canvas.width  = Math.floor(W * DPR);
+  canvas.height = Math.floor(H * DPR);
+  canvas.style.width  = W + "px";
+  canvas.style.height = H + "px";
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  seed();
+}
+function seed(){
+  stars.length = 0;
+  var n = Math.min(200, Math.max(90, Math.round(W * H / 6400)));
+  for (var i = 0; i < n; i++){
+    stars.push({
+      x: Math.random()*W, y: Math.random()*H,
+      r: Math.random()*1.4 + .25,
+      a: Math.random()*.5 + .16,
+      vx: Math.random()*.10 + .02,
+      vy: Math.random()*.05 - .025,
+      tw: Math.random()*.9 + .3,
+      c: pick(WARM),
+      z: Math.random()*.8 + .2
+    });
+  }
+  flies.length = 0;
+  var f = Math.min(26, Math.max(10, Math.round(W*H/48000)));
+  for (var j = 0; j < f; j++){
+    flies.push({
+      x: Math.random()*W, y: Math.random()*H,
+      r: Math.random()*1.6 + .9,
+      a: Math.random()*.35 + .12,
+      vy: -(Math.random()*.20 + .06),
+      drift: Math.random()*.5 + .2,
+      ph: Math.random()*Math.PI*2
+    });
+  }
+}
+function setParallax(x, y){
+  px = Math.max(-1, Math.min(1, x));
+  py = Math.max(-1, Math.min(1, y));
+}
+function burst(x, y, count, speed){
+  if (sparks.length > 900) return;
+  for (var i = 0; i < count; i++){
+    var ang = Math.random()*Math.PI*2;
+    var v = (Math.random()*.9 + .3) * speed;
+    sparks.push({
+      x:x, y:y,
+      vx: Math.cos(ang)*v, vy: Math.sin(ang)*v,
+      life: 58 + Math.random()*30, max: 88,
+      r: .9 + Math.random()*1.7,
+      g: .026 + Math.random()*.02,
+      c: pick(WARM)
+    });
+  }
+}
+function softBurstAtCard(count){
+  var r = document.getElementById("card").getBoundingClientRect();
+  burst(r.left + r.width*.5, r.top + Math.min(r.height*.35, H*.4), count, 2.1);
+}
+function shootingStar(){
+  var left = Math.random() < .5;
+  trails.push({
+    x: left ? rand(-90, W*.25) : rand(W*.75, W+90),
+    y: rand(10, H*.34),
+    vx: left ? rand(4.0, 6.2) : rand(-6.2, -4.0),
+    vy: rand(1.0, 2.6),
+    life: 46 + Math.random()*20, max: 66,
+    c: pick(WARM)
+  });
+}
+function scheduleStar(){
+  setTimeout(function(){
+    if (running && !reduceMotion) shootingStar();
+    scheduleStar();
+  }, rand(5200, 13000));
+}
+
+function drawMoon(){
+  var mx = W*.84 + px*10, my = H*.14 + py*8, R = Math.max(70, Math.min(W,H)*.16);
+  var g = ctx.createRadialGradient(mx, my, 0, mx, my, R);
+  g.addColorStop(0, "rgba(255,238,214,.16)");
+  g.addColorStop(.45, "rgba(255,214,170,.06)");
+  g.addColorStop(1, "rgba(255,200,150,0)");
+  ctx.fillStyle = g;
+  ctx.beginPath(); ctx.arc(mx, my, R, 0, Math.PI*2); ctx.fill();
+  ctx.fillStyle = "rgba(255,244,226,.30)";
+  ctx.beginPath(); ctx.arc(mx, my, Math.max(9, R*.13), 0, Math.PI*2); ctx.fill();
+}
+
+function frame(){
+  if (!running){ requestAnimationFrame(frame); return; }
+  ctx.clearRect(0, 0, W, H);
+  var t = Date.now()/1000;
+
+  drawMoon();
+
+  var i, s;
+  for (i = 0; i < stars.length; i++){
+    s = stars[i];
+    var tw = .28*Math.sin(t*s.tw + s.x*.01) + .72;
+    ctx.globalAlpha = s.a * tw;
+    ctx.fillStyle = "rgba(" + s.c + ",1)";
+    ctx.beginPath();
+    ctx.arc(s.x + px*26*s.z, s.y + py*16*s.z, s.r, 0, Math.PI*2);
+    ctx.fill();
+    s.x += s.vx; s.y += s.vy;
+    if (s.x > W + 20) s.x = -20;
+    if (s.y > H + 20) s.y = -20;
+    if (s.y < -20) s.y = H + 20;
+  }
+
+  for (i = 0; i < flies.length; i++){
+    var f = flies[i];
+    f.ph += .018;
+    f.y += f.vy;
+    f.x += Math.sin(f.ph)*f.drift*.5;
+    if (f.y < -20){ f.y = H + 20; f.x = Math.random()*W; }
+    var pulse = .5 + .5*Math.sin(f.ph*1.7);
+    ctx.globalAlpha = f.a * (.35 + .65*pulse);
+    ctx.fillStyle = "rgba(255,214,150,1)";
+    ctx.beginPath(); ctx.arc(f.x + px*12, f.y + py*8, f.r, 0, Math.PI*2); ctx.fill();
+    ctx.globalAlpha *= .13;
+    ctx.beginPath(); ctx.arc(f.x + px*12, f.y + py*8, f.r*4.4, 0, Math.PI*2); ctx.fill();
+  }
+
+  for (i = trails.length - 1; i >= 0; i--){
+    var tr = trails[i];
+    tr.x += tr.vx; tr.y += tr.vy; tr.life--;
+    ctx.globalAlpha = Math.max(0, tr.life/tr.max) * .8;
+    ctx.strokeStyle = "rgba(" + tr.c + ",1)";
+    ctx.lineWidth = 1.8; ctx.lineCap = "round";
+    ctx.beginPath();
+    ctx.moveTo(tr.x, tr.y);
+    ctx.lineTo(tr.x - tr.vx*7, tr.y - tr.vy*7);
+    ctx.stroke();
+    if (tr.life <= 0) trails.splice(i, 1);
+  }
+
+  for (i = sparks.length - 1; i >= 0; i--){
+    var p = sparks[i];
+    p.vy += p.g; p.x += p.vx; p.y += p.vy; p.life--;
+    p.vx *= .986; p.vy *= .986;
+    var al = Math.max(0, p.life/p.max);
+    ctx.globalAlpha = al;
+    ctx.fillStyle = "rgba(" + p.c + ",1)";
+    ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.fill();
+    ctx.globalAlpha = al*.12;
+    ctx.beginPath(); ctx.arc(p.x, p.y, p.r*4.2, 0, Math.PI*2); ctx.fill();
+    if (p.life <= 0) sparks.splice(i, 1);
+  }
+
+  ctx.globalAlpha = 1;
+  requestAnimationFrame(frame);
+}
+
+window.addEventListener("resize", resize, { passive:true });
+window.addEventListener("orientationchange", function(){ setTimeout(resize, 260); }, { passive:true });
+document.addEventListener("visibilitychange", function(){ running = !document.hidden; });
+window.addEventListener("mousemove", function(e){
+  setParallax(e.clientX/W - .5, e.clientY/H - .5);
+}, { passive:true });
+
+function tapAt(x, y){
+  burst(x, y, 60, 2.7);
+  burst(x + rand(-10,10), y + rand(-10,10), 26, 1.8);
+  haptic(8);
+}
+window.addEventListener("touchstart", function(e){
+  var t0 = e.touches && e.touches[0];
+  if (t0) tapAt(t0.clientX, t0.clientY);
+}, { passive:true });
+window.addEventListener("mousedown", function(e){ tapAt(e.clientX, e.clientY); }, { passive:true });
+
+/* ========== 彩蛋 ========== */
+var flash = document.getElementById("flash");
+var eggBusy = false;
+function haptic(ms){
+  try { if (navigator.vibrate) navigator.vibrate(ms); } catch(e){}
+}
+function chime(){
+  try {
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return;
+    var ac = new AC();
+    [523.25, 659.25, 783.99, 1046.5].forEach(function(f, i){
+      var o = ac.createOscillator(), g = ac.createGain();
+      o.type = "sine"; o.frequency.value = f;
+      var t0 = ac.currentTime + i*0.14;
+      g.gain.setValueAtTime(0.0001, t0);
+      g.gain.exponentialRampToValueAtTime(0.09, t0 + 0.03);
+      g.gain.exponentialRampToValueAtTime(0.0001, t0 + 1.1);
+      o.connect(g); g.connect(ac.destination);
+      o.start(t0); o.stop(t0 + 1.2);
+    });
+    setTimeout(function(){ try{ ac.close(); }catch(e){} }, 2400);
+  } catch(e){}
+}
+function eggSequence(){
+  var r = document.getElementById("card").getBoundingClientRect();
+  var cx = r.left + r.width*.5, cy = r.top + r.height*.38;
+  var steps = [];
+  var i;
+  for (i = 0; i < 6; i++) steps.push({ d: 110, fn: function(){ burst(cx + rand(-110,110), cy + rand(-70,80), 56, 2.5); } });
+  for (i = 0; i < 8; i++) steps.push({ d: 130, fn: function(){ burst(rand(40, W-40), rand(50, H*.6), 72, 3.1); } });
+  for (i = 0; i < 5; i++) steps.push({ d: 150, fn: shootingStar });
+  var k = 0;
+  return new Promise(function(done){
+    (function run(){
+      if (k >= steps.length){ done(); return; }
+      var st = steps[k++];
+      st.fn();
+      setTimeout(run, st.d);
+    })();
+  });
+}
+document.getElementById("egg").addEventListener("click", function(e){
+  e.stopPropagation();
+  if (eggBusy) return;
+  eggBusy = true;
+  flash.classList.add("on");
+  haptic(24);
+  chime();
+  render(
+    '<h2>✨ 彩蛋出现了</h2>' +
+    '<p class="warm" style="font-size:16.5px;line-height:1.85">' + esc(SHORT) + '，这一刻，世界请对你温柔一点。</p>' +
+    '<p>你不用变得更好才配被喜欢，你现在这样就很好。</p>' +
+    '<p style="opacity:.62;font-size:13px">（轻触屏幕，星光会更热闹一点）</p>'
+  );
+  eggSequence().then(function(){
+    setTimeout(function(){
+      flash.classList.remove("on");
+      eggBusy = false;
+    }, 700);
+  });
+});
+
+/* ========== 提示 / 复制 / 重力感应 ========== */
+var toastEl = document.getElementById("toast"), toastTimer = null;
+function toast(msg){
+  toastEl.textContent = msg;
+  toastEl.classList.add("on");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ toastEl.classList.remove("on"); }, 1600);
+}
+document.getElementById("copy").addEventListener("click", function(e){
+  e.stopPropagation();
+  var url = window.location.href;
+  function fallback(){
+    try {
+      var ta = document.createElement("textarea");
+      ta.value = url;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed"; ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select(); ta.setSelectionRange(0, url.length);
+      var ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      toast(ok ? "链接已复制，去分享吧" : "复制失败，长按地址栏手动复制");
+    } catch(err){ toast("复制失败，长按地址栏手动复制"); }
+  }
+  if (navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(url).then(function(){ toast("链接已复制，去分享吧"); }, fallback);
+  } else { fallback(); }
+});
+
+var motionBtn = document.getElementById("motion");
+var motionOn = false, gyroBound = false;
+motionBtn.addEventListener("click", function(e){
+  e.stopPropagation();
+  if (motionOn){
+    motionOn = false;
+    motionBtn.textContent = "开启重力感应";
+    setParallax(0, 0);
+    toast("已关闭重力感应");
+    return;
+  }
+  var go = function(){
+    if (!gyroBound){
+      window.addEventListener("deviceorientation", function(ev){
+        if (!motionOn) return;
+        if (typeof ev.gamma === "number" && typeof ev.beta === "number"){
+          setParallax(ev.gamma/36, (ev.beta - 40)/46);
+        }
+      }, { passive:true });
+      gyroBound = true;
+    }
+    motionOn = true;
+    motionBtn.textContent = "关闭重力感应";
+    toast("重力感应已开启，晃一晃试试");
+  };
+  try {
+    if (typeof DeviceOrientationEvent !== "undefined" && typeof DeviceOrientationEvent.requestPermission === "function"){
+      DeviceOrientationEvent.requestPermission().then(function(res){
+        if (res === "granted") go(); else toast("没有获得授权，没关系");
+      }, function(){ toast("当前环境不支持重力感应"); });
+    } else if (typeof DeviceOrientationEvent !== "undefined"){
+      go();
+    } else {
+      toast("当前设备不支持重力感应");
+    }
+  } catch(err){ toast("当前环境不支持重力感应"); }
+});
+
+/* ========== 启动 ========== */
+resize();
+requestAnimationFrame(frame);
+scheduleStar();
+setTimeout(function(){ softBurstAtCard(26); }, 900);
+})();
+</script>
+</body>
+</html>
