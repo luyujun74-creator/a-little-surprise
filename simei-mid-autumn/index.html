@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#141d32">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2215%22%20fill%3D%22%23141d32%22/%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2230%22%20r%3D%2218%22%20fill%3D%22%23ffdb97%22/%3E%3C/svg%3E">
+<meta name="description" content="送给思梅姐的一份中秋祝福">
+<title>思梅姐，收下一点中秋的好心情 🌕</title>
+<style>
+:root{color-scheme:dark;--ink:#fff7e8;--muted:#d5c9bc}
+*{box-sizing:border-box}html{min-height:100%;background:#141d32}
+body{margin:0;min-height:100svh;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:radial-gradient(ellipse at 50% 12%,#39435f 0,#202940 32%,#141d32 73%);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.65;background-image:radial-gradient(#fff 1px,transparent 1.3px),radial-gradient(#f7cf92 1px,transparent 1.4px);background-size:97px 113px,153px 137px;background-position:13px 19px,72px 49px;mask-image:linear-gradient(#000 0%,transparent 85%)}
+.scene{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:34px 18px max(38px,env(safe-area-inset-bottom));position:relative;isolation:isolate}
+.eyebrow{margin:0;font-size:11px;letter-spacing:.3em;color:#e8d2ac;opacity:.8;text-align:center}
+.moon{width:126px;height:126px;border:0;border-radius:50%;cursor:pointer;position:relative;flex:none;background:radial-gradient(circle at 35% 30%,#fffdf0,#ffe4a4 48%,#e5ac66 100%);box-shadow:0 0 30px #f7cb8170,0 0 94px #f7cb8138,0 0 170px #f7cb811f;transition:transform .5s,box-shadow .5s;animation:float 5s ease-in-out infinite}
+.moon::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at 70% 65%,#b8825b16 0 10%,transparent 11%),radial-gradient(circle at 35% 38%,#b8825b14 0 7%,transparent 8%)}
+.moon:hover{transform:scale(1.06);box-shadow:0 0 45px #f7cb8190,0 0 120px #f7cb814a}
+.moon:focus-visible,button:focus-visible{outline:2px solid #fff5d6;outline-offset:5px}.moon[disabled]{cursor:default}
+.moon-caption{margin:0;color:#d8c5a8;font-size:12px;min-height:18px;text-align:center}
+.sheet{width:min(100%,445px);min-height:320px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px 25px 30px;border:1px solid #f8dfba3b;border-radius:25px;background:linear-gradient(145deg,#fffdfc19,#fff7e908);box-shadow:0 24px 60px #07101f80,inset 0 1px #ffffff32;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)}
+.sheet::before{content:"✦";position:absolute;top:17px;right:22px;font-size:16px;color:#f7d7a0;opacity:.7}
+.seal{display:grid;place-items:center;width:58px;height:58px;margin:0 auto 20px;border-radius:50%;border:1px solid #ffdfa877;color:#f6d49b;background:#fff9e910;font-size:22px;box-shadow:0 0 28px #f9d58a18}
+h1{font-size:clamp(25px,7vw,32px);line-height:1.35;letter-spacing:.045em;font-weight:550;margin:0 0 12px}
+.intro{font-size:14px;line-height:1.85;color:var(--muted);margin:0 0 24px}
+.action{appearance:none;border:1px solid #ffe2aa;border-radius:999px;padding:12px 25px;min-height:45px;color:#293048;background:linear-gradient(135deg,#fff1ce,#f3c47c);font:600 14px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;cursor:pointer;box-shadow:0 9px 23px #0d142747;transition:transform .2s,filter .2s}
+.action:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.opened{display:none;width:100%;animation:unfold .75s ease both}.sheet.is-open{background:linear-gradient(160deg,#fffdfc20,#f5dcb30c)}.sheet.is-open .closed{display:none}.sheet.is-open .opened{display:block}
+.letter-label{color:#e9cb9e;font-size:11px;letter-spacing:.24em;margin:0 0 13px}
+.message{font-size:clamp(15px,4vw,17px);line-height:1.98;letter-spacing:.025em;color:#fff9ed;margin:3px auto 17px;max-width:340px}.message strong{color:#ffe1a9;font-weight:600}
+.sign{color:#d9c2a0;font-size:13px;margin:0}.divider{width:58px;height:1px;background:linear-gradient(90deg,transparent,#f5d28d,transparent);margin:19px auto}
+.wish{min-height:44px;margin:0 auto 16px;color:#ffe1ad;font-size:14px;line-height:1.7}.tip{font-size:12px;color:#c6b8aa;margin:0}
+.petal{position:fixed;width:7px;height:12px;border-radius:80% 0 80% 0;background:#e8b85f;opacity:.56;pointer-events:none;z-index:0;animation:drift linear infinite}
+.spark{position:fixed;width:5px;height:5px;border-radius:50%;background:#fff4c8;pointer-events:none;z-index:5;animation:burst .85s ease-out forwards}
+@keyframes float{50%{translate:0 -7px}}@keyframes unfold{from{opacity:0;transform:translateY(13px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes drift{from{transform:translate3d(0,-14vh,0) rotate(0)}to{transform:translate3d(45px,115vh,0) rotate(480deg)}}@keyframes burst{to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.25)}}
+@media(max-height:710px){.scene{justify-content:flex-start;gap:11px;padding-top:20px}.moon{width:87px;height:87px}.sheet{min-height:290px;padding:24px 22px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<main class="scene">
+<p class="eyebrow">MID-AUTUMN · A LITTLE NOTE FOR YOU</p>
+<button class="moon" id="moon" type="button" aria-label="点亮月亮，看看下一句祝福" disabled></button>
+<p class="moon-caption" id="moonCaption">今晚的月亮，先替我把祝福送到</p>
+<section class="sheet" id="sheet" aria-label="中秋祝福卡片">
+<div class="closed">
+<div class="seal" aria-hidden="true">✉</div>
+<h1>给思梅姐的一封中秋小笺</h1>
+<p class="intro">月亮已经到位，<br>有一句祝福，想亲手交给你。</p>
+<button class="action" id="open" type="button">拆开看看 ✨</button>
+</div>
+<div class="opened" id="letter">
+<p class="letter-label">TO 思梅姐 · 中秋快乐</p>
+<h1>愿你今晚，刚好开心 🌕</h1>
+<p class="message">思梅姐，中秋快乐呀！<br>前阵子谢谢你的沟通和安排。忙碌之余，也希望你能和家人好好吃顿饭、看看月亮，享受一个<strong>轻松又温暖的夜晚</strong>。</p>
+<p class="sign">接下来的日子，也愿好事常常发生。</p>
+<div class="divider"></div>
+<p class="wish" id="wish" aria-live="polite">听说点一下月亮，还能收到一份小小的好运。</p>
+<p class="tip">☝ 轻点上面的月亮，看看它想对你说什么</p>
+</div>
+</section>
+</main>
+<script>
+const wishes=[
+'愿今天的月饼，刚好是你喜欢的口味 🥮',
+'愿忙碌的日子里，总有属于自己的轻松时刻 ✨',
+'愿今晚有人陪你赏月，也有人惦记你开心 🌙',
+'愿接下来的日子，像今晚的月亮一样明亮 🌕'
+];
+const moon=document.getElementById('moon'),sheet=document.getElementById('sheet'),wish=document.getElementById('wish');
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let index=0;
+document.getElementById('open').addEventListener('click',()=>{
+ sheet.classList.add('is-open');moon.disabled=false;
+ document.getElementById('moonCaption').textContent='月亮还藏了几句祝福，点它看看';
+ if(!reduced)sparkle(moon.getBoundingClientRect());
+});
+moon.addEventListener('click',()=>{wish.textContent=wishes[index++%wishes.length];if(!reduced)sparkle(moon.getBoundingClientRect())});
+function sparkle(rect){
+ const cx=rect.left+rect.width/2,cy=rect.top+rect.height/2;
+ for(let i=0;i<11;i++){
+  const s=document.createElement('i');s.className='spark';
+  const a=i*Math.PI*2/11,r=42+Math.random()*55;
+  s.style.left=cx+'px';s.style.top=cy+'px';
+  s.style.setProperty('--dx',Math.cos(a)*r+'px');
+  s.style.setProperty('--dy',Math.sin(a)*r+'px');
+  document.body.appendChild(s);s.addEventListener('animationend',()=>s.remove());
+ }
+}
+if(!reduced)for(let i=0;i<12;i++){
+ const p=document.createElement('i');p.className='petal';
+ p.style.left=Math.random()*100+'vw';
+ p.style.animationDuration=9+Math.random()*8+'s';
+ p.style.animationDelay=-Math.random()*16+'s';
+ document.body.appendChild(p);
+}
+</script>
+</body>
+</html>
