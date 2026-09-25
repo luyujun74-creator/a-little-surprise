@@ -1,101 +1,35 @@
 <!doctype html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#141d32">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2215%22%20fill%3D%22%23141d32%22/%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2230%22%20r%3D%2218%22%20fill%3D%22%23ffdb97%22/%3E%3C/svg%3E">
-<meta name="description" content="送给思梅姐的一份中秋祝福">
-<title>思梅姐，收下一点中秋的好心情 🌕</title>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#201d32"><meta name="description" content="思梅姐，中秋快乐。一封小笺，几份小惊喜，愿你今晚轻松又开心。"><title>思梅姐，今晚有一份小惊喜 🌕</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23201d32'/%3E%3Ccircle cx='32' cy='32' r='20' fill='%23f7dca8'/%3E%3C/svg%3E">
 <style>
-:root{color-scheme:dark;--ink:#fff7e8;--muted:#d5c9bc}
-*{box-sizing:border-box}html{min-height:100%;background:#141d32}
-body{margin:0;min-height:100svh;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:radial-gradient(ellipse at 50% 12%,#39435f 0,#202940 32%,#141d32 73%);overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.65;background-image:radial-gradient(#fff 1px,transparent 1.3px),radial-gradient(#f7cf92 1px,transparent 1.4px);background-size:97px 113px,153px 137px;background-position:13px 19px,72px 49px;mask-image:linear-gradient(#000 0%,transparent 85%)}
-.scene{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:34px 18px max(38px,env(safe-area-inset-bottom));position:relative;isolation:isolate}
-.eyebrow{margin:0;font-size:11px;letter-spacing:.3em;color:#e8d2ac;opacity:.8;text-align:center}
-.moon{width:126px;height:126px;border:0;border-radius:50%;cursor:pointer;position:relative;flex:none;background:radial-gradient(circle at 35% 30%,#fffdf0,#ffe4a4 48%,#e5ac66 100%);box-shadow:0 0 30px #f7cb8170,0 0 94px #f7cb8138,0 0 170px #f7cb811f;transition:transform .5s,box-shadow .5s;animation:float 5s ease-in-out infinite}
-.moon::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at 70% 65%,#b8825b16 0 10%,transparent 11%),radial-gradient(circle at 35% 38%,#b8825b14 0 7%,transparent 8%)}
-.moon:hover{transform:scale(1.06);box-shadow:0 0 45px #f7cb8190,0 0 120px #f7cb814a}
-.moon:focus-visible,button:focus-visible{outline:2px solid #fff5d6;outline-offset:5px}.moon[disabled]{cursor:default}
-.moon-caption{margin:0;color:#d8c5a8;font-size:12px;min-height:18px;text-align:center}
-.sheet{width:min(100%,445px);min-height:320px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px 25px 30px;border:1px solid #f8dfba3b;border-radius:25px;background:linear-gradient(145deg,#fffdfc19,#fff7e908);box-shadow:0 24px 60px #07101f80,inset 0 1px #ffffff32;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)}
-.sheet::before{content:"✦";position:absolute;top:17px;right:22px;font-size:16px;color:#f7d7a0;opacity:.7}
-.seal{display:grid;place-items:center;width:58px;height:58px;margin:0 auto 20px;border-radius:50%;border:1px solid #ffdfa877;color:#f6d49b;background:#fff9e910;font-size:22px;box-shadow:0 0 28px #f9d58a18}
-h1{font-size:clamp(25px,7vw,32px);line-height:1.35;letter-spacing:.045em;font-weight:550;margin:0 0 12px}
-.intro{font-size:14px;line-height:1.85;color:var(--muted);margin:0 0 24px}
-.action{appearance:none;border:1px solid #ffe2aa;border-radius:999px;padding:12px 25px;min-height:45px;color:#293048;background:linear-gradient(135deg,#fff1ce,#f3c47c);font:600 14px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;cursor:pointer;box-shadow:0 9px 23px #0d142747;transition:transform .2s,filter .2s}
-.action:hover{transform:translateY(-2px);filter:brightness(1.07)}
-.opened{display:none;width:100%;animation:unfold .75s ease both}.sheet.is-open{background:linear-gradient(160deg,#fffdfc20,#f5dcb30c)}.sheet.is-open .closed{display:none}.sheet.is-open .opened{display:block}
-.letter-label{color:#e9cb9e;font-size:11px;letter-spacing:.24em;margin:0 0 13px}
-.message{font-size:clamp(15px,4vw,17px);line-height:1.98;letter-spacing:.025em;color:#fff9ed;margin:3px auto 17px;max-width:340px}.message strong{color:#ffe1a9;font-weight:600}
-.sign{color:#d9c2a0;font-size:13px;margin:0}.divider{width:58px;height:1px;background:linear-gradient(90deg,transparent,#f5d28d,transparent);margin:19px auto}
-.wish{min-height:44px;margin:0 auto 16px;color:#ffe1ad;font-size:14px;line-height:1.7}.tip{font-size:12px;color:#c6b8aa;margin:0}
-.petal{position:fixed;width:7px;height:12px;border-radius:80% 0 80% 0;background:#e8b85f;opacity:.56;pointer-events:none;z-index:0;animation:drift linear infinite}
-.spark{position:fixed;width:5px;height:5px;border-radius:50%;background:#fff4c8;pointer-events:none;z-index:5;animation:burst .85s ease-out forwards}
-@keyframes float{50%{translate:0 -7px}}@keyframes unfold{from{opacity:0;transform:translateY(13px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
-@keyframes drift{from{transform:translate3d(0,-14vh,0) rotate(0)}to{transform:translate3d(45px,115vh,0) rotate(480deg)}}@keyframes burst{to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.25)}}
-@media(max-height:710px){.scene{justify-content:flex-start;gap:11px;padding-top:20px}.moon{width:87px;height:87px}.sheet{min-height:290px;padding:24px 22px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
-</style>
-</head>
-<body>
-<main class="scene">
-<p class="eyebrow">MID-AUTUMN · A LITTLE NOTE FOR YOU</p>
-<button class="moon" id="moon" type="button" aria-label="点亮月亮，看看下一句祝福" disabled></button>
-<p class="moon-caption" id="moonCaption">今晚的月亮，先替我把祝福送到</p>
-<section class="sheet" id="sheet" aria-label="中秋祝福卡片">
-<div class="closed">
-<div class="seal" aria-hidden="true">✉</div>
-<h1>给思梅姐的一封中秋小笺</h1>
-<p class="intro">月亮已经到位，<br>有一句祝福，想亲手交给你。</p>
-<button class="action" id="open" type="button">拆开看看 ✨</button>
-</div>
-<div class="opened" id="letter">
-<p class="letter-label">TO 思梅姐 · 中秋快乐</p>
-<h1>愿你今晚，刚好开心 🌕</h1>
-<p class="message">思梅姐，中秋快乐呀！<br>前阵子谢谢你的沟通和安排。忙碌之余，也希望你能和家人好好吃顿饭、看看月亮，享受一个<strong>轻松又温暖的夜晚</strong>。</p>
-<p class="sign">接下来的日子，也愿好事常常发生。</p>
-<div class="divider"></div>
-<p class="wish" id="wish" aria-live="polite">听说点一下月亮，还能收到一份小小的好运。</p>
-<p class="tip">☝ 轻点上面的月亮，看看它想对你说什么</p>
-</div>
-</section>
-</main>
+:root{color-scheme:dark;--ink:#f9eedc;--soft:#c9bfb7;--gold:#edcc97;--line:#f3d7a92b;--serif:"Songti SC","Noto Serif CJK SC",SimSun,serif}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:#201d32;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:5px}button{touch-action:manipulation}button:disabled{cursor:default}body:before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at 85% 20%,#76556350,transparent 58%),radial-gradient(ellipse at 10% 75%,#b18a5520,transparent 60%);pointer-events:none}.sky{position:fixed;inset:0;pointer-events:none;overflow:hidden}.star{position:absolute;width:2px;height:2px;background:#ffeac0;border-radius:50%;opacity:.45;animation:twinkle 5s ease-in-out infinite}.wrap{max-width:1100px;margin:auto;padding:28px 38px 40px;position:relative}header{display:flex;justify-content:space-between;align-items:center;color:var(--gold);font-size:12px;letter-spacing:.16em;border-bottom:1px solid var(--line);padding-bottom:20px}.brand{display:flex;align-items:center;gap:12px}.brand b{font-size:18px;font-weight:400}.sound{border:1px solid var(--line);color:var(--soft);background:transparent;border-radius:30px;min-height:42px;padding:8px 14px;font-size:12px;letter-spacing:0}.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:50px;align-items:center;padding:60px 0 44px}.eyebrow{font-size:12px;letter-spacing:.22em;color:var(--gold);margin:0 0 20px}h1{font-family:var(--serif);font-size:clamp(35px,5vw,58px);line-height:1.4;font-weight:400;letter-spacing:.045em;margin:0 0 24px}h1 span{color:var(--gold)}.lead{font-size:16px;color:var(--soft);margin:0;line-height:2}.moon-area{text-align:center;position:relative;padding:18px}.orbit{width:270px;height:270px;margin:auto;border:1px solid #efd3a51f;border-radius:50%;display:grid;place-items:center;position:relative}.orbit:before{content:"";position:absolute;inset:-17px;border-radius:50%;border:1px dashed #efd3a519}.moon{border:0;width:205px;height:205px;border-radius:50%;background:radial-gradient(circle at 32% 26%,#fff5d7,#f0d1a0 62%,#b99277);box-shadow:0 0 60px #eac78c29,inset -15px -16px 30px #80644822;position:relative;transition:filter .4s,transform .4s}.moon:before{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(ellipse at 60% 64%,#ab89631c 0 13%,transparent 14%),radial-gradient(circle at 25% 45%,#ab896313 0 9%,transparent 10%)}.moon:hover{transform:scale(1.03);filter:brightness(1.07)}.moon-note{font-size:12px;color:var(--soft);margin:24px 0 0;min-height:20px}.open-letter{margin-top:30px;background:var(--gold);border:0;color:#352837;border-radius:6px;padding:13px 21px;font-size:15px;box-shadow:0 6px 25px #0002}.open-letter:hover{background:#ffe4b7}.section-top{border-top:1px solid var(--line);padding:25px 0 20px;display:flex;align-items:center;justify-content:space-between;gap:15px}.section-top h2{font-weight:400;font-size:18px;margin:0}.section-top p{color:var(--soft);font-size:12px;margin:0}.gifts{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.gift{border:1px solid var(--line);border-radius:12px;padding:24px;text-align:left;color:var(--ink);background:linear-gradient(150deg,#ffffff08,#ffffff02);position:relative;min-height:203px;transition:transform .25s,background .25s}.gift:hover{transform:translateY(-5px);background:#ffffff0b}.gift .no{display:block;font-size:11px;letter-spacing:.18em;color:var(--soft)}.gift .icon{display:block;font-size:35px;margin:12px 0 14px}.gift strong{font-family:var(--serif);font-size:22px;font-weight:400;display:block}.gift small{display:block;color:var(--soft);font-size:13px;margin-top:8px}.gift .arrow{position:absolute;right:23px;top:23px;color:var(--gold)}.gift.done:after{content:"已收下 ✓";position:absolute;right:18px;bottom:20px;font-size:11px;color:var(--gold)}.footer{text-align:center;color:#b9aea3;font-size:12px;margin:28px 0 0}.footer p{margin:6px 0}.bonus{display:block;margin:24px auto 0;border:1px dashed #edcc9766;background:#edcc9710;color:var(--gold);padding:12px 20px;border-radius:8px;font-size:14px;animation:arrive .6s both}.hidden,[hidden]{display:none!important}dialog{border:1px solid #e4c9a5;background:#fbf4e7;color:#4d3b36;border-radius:14px;padding:0;width:min(490px,calc(100% - 30px));max-height:88svh;box-shadow:0 35px 120px #0008;color-scheme:light}dialog::backdrop{background:#100e1dd1;backdrop-filter:blur(6px)}.inside{padding:38px 34px 30px;position:relative}.close{position:absolute;right:12px;top:10px;border:0;background:transparent;font-size:27px;color:#8d7768;line-height:1;width:40px;height:40px}.label{font-size:11px;letter-spacing:.22em;color:#92705d;margin:0 0 20px}.inside h2{font-family:var(--serif);font-size:30px;line-height:1.5;font-weight:400;margin:0 0 18px;color:#493339}.inside p{font-size:16px;line-height:2}.inside .fine{font-size:13px;color:#8c7563;margin:12px 0}.letter-text{background:repeating-linear-gradient(transparent 0 35px,#9e765712 35px 36px);line-height:36px!important}.signed{text-align:right;color:#8a695b;font-size:14px!important}.primary{border:0;background:#594452;color:#fff4df;padding:11px 19px;border-radius:6px;min-height:45px;font-size:14px}.primary:hover{background:#73596c}.choices{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.choices button{border:1px solid #b99b8266;background:#fff9ef;color:#6c4c42;border-radius:25px;min-height:44px;padding:8px 16px;font-size:14px}.choices button[aria-pressed=true]{background:#6e505c;color:#fff4df;border-color:#6e505c}.answer{padding:18px;border:1px solid #bc9d782c;border-radius:9px;background:#ead7b52b;min-height:104px;display:grid;place-items:center;text-align:center;margin:20px 0;font-size:16px;line-height:1.9}.center{text-align:center}.cake{border:0;background:transparent;font-size:88px;display:block;margin:4px auto;min-width:130px;min-height:135px;transition:transform .2s}.cake:hover{transform:rotate(-7deg) scale(1.05)}.breath{height:130px;display:grid;place-items:center;margin:14px 0}.breath-circle{width:80px;height:80px;border-radius:50%;border:1px solid #a0866b;background:#ddc7a250;display:grid;place-items:center;font-size:15px;color:#795d4a}.breathing{animation:breathe 6s ease-in-out}.burst{position:fixed;z-index:1000;pointer-events:none;color:#f9dca5;font-size:13px;animation:burst 1.1s ease-out forwards}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#fff0d5;color:#4f3946;padding:10px 18px;border-radius:30px;font-size:13px;z-index:2000;max-width:90%;text-align:center;box-shadow:0 6px 20px #0004}.save-note{font-size:12px!important;color:#8c7563}.final-icon{font-size:50px;margin:14px 0}dialog[open]{animation:arrive .3s both}@keyframes arrive{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}@keyframes twinkle{50%{opacity:.15}}@keyframes burst{to{opacity:0;translate:var(--dx) var(--dy);rotate:90deg}}@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.45)}}@media(max-width:700px){.wrap{padding:20px 21px 30px}.hero{grid-template-columns:1fr;gap:22px;padding:30px 0}.hero-copy{text-align:center;order:2}.moon-area{order:1;padding:0}.orbit{width:135px;height:135px}.orbit:before{inset:-10px}.moon{width:112px;height:112px}.moon-note{margin-top:17px}h1{font-size:33px;line-height:1.4;margin-bottom:14px}.eyebrow{margin-bottom:12px}.lead{font-size:14px}.open-letter{margin-top:20px}.gifts{grid-template-columns:1fr;gap:12px}.gift{min-height:115px;padding:20px 22px 20px 88px}.gift .icon{position:absolute;left:24px;top:23px;margin:0;font-size:33px}.gift .no{font-size:10px}.gift strong{font-size:21px}.gift small{font-size:12px}.gift.done:after{bottom:9px;right:16px}.section-top{padding:20px 0 15px}.section-top h2{font-size:16px}.inside{padding:35px 25px 26px}.inside h2{font-size:26px}.inside p{font-size:15px}header{font-size:10px}.sound{font-size:11px}.footer{margin-top:23px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style></head><body>
+<div class="sky" aria-hidden="true" id="sky"></div><main class="wrap"><header><span class="brand"><b>☾</b> 中秋 · 一点小心意</span><button class="sound" id="sound" aria-pressed="false">♫ 开启轻音乐</button></header>
+<section class="hero"><div class="hero-copy"><p class="eyebrow">A LITTLE JOY, JUST FOR YOU</p><h1>思梅姐，<br>把今晚的<span>好心情</span><br>送给你。</h1><p class="lead">中秋快乐呀。<br>愿今晚有好吃的月饼，有家人的笑声，<br>也有一点留给自己的轻松。</p><button class="open-letter" id="openLetter">有一封小笺，等你拆开 ↗</button></div><div class="moon-area"><div class="orbit"><button class="moon" id="moon" aria-label="轻点月亮，发现隐藏祝福"></button></div><p class="moon-note" id="moonNote" aria-live="polite">这颗月亮，也藏了一点小心思。轻点试试。</p></div></section>
+<section aria-labelledby="giftTitle"><div class="section-top"><h2 id="giftTitle">给假期加一点甜</h2><p id="progress" aria-live="polite">三份小惊喜，慢慢拆</p></div><div class="gifts"><button class="gift" data-gift="cake"><span class="no">01 / 一口甜</span><span class="icon">🥮</span><strong>挑一块月饼</strong><small>今天的快乐，可以很简单。</small><span class="arrow">↗</span></button><button class="gift" data-gift="rest"><span class="no">02 / 一点闲</span><span class="icon">🍵</span><strong>偷六秒钟的闲</strong><small>给忙碌按一下暂停。</small><span class="arrow">↗</span></button><button class="gift" data-gift="wish"><span class="no">03 / 一份好意</span><span class="icon">✦</span><strong>抽一签好心情</strong><small>看看今晚的好运写了什么。</small><span class="arrow">↗</span></button></div><button class="bonus" id="bonus" hidden>✧ 你找齐了三份惊喜，还有最后一份 →</button></section><footer class="footer"><p>月亮会圆，假期值得慢慢过。</p><p>— Yujun · 中秋的一点小心意</p></footer></main>
+<dialog id="letter"><div class="inside"><button class="close" aria-label="关闭小笺">×</button><p class="label">一封小笺 / TO 思梅姐</p><h2>今晚，愿你刚好开心。</h2><p class="letter-text">思梅姐，中秋快乐呀！<br>前段时间谢谢你的沟通和安排。<br>趁着这个假期，愿你和家人吃顿喜欢的饭，聊聊开心的事，也给自己留一点什么都不用赶的时间。</p><p>祝你假期轻松愉快，<br>往后的日子，也常有小惊喜。</p><p class="signed">Yujun 敬上 🌕</p><button class="primary" data-close>收下这份祝福</button></div></dialog>
+<dialog id="cake"><div class="inside center"><button class="close" aria-label="关闭月饼礼物">×</button><p class="label">第一份 / 一口甜</p><h2>今天想吃哪一块？</h2><div class="choices" id="flavors"><button data-flavor="莲蓉蛋黄" aria-pressed="false">莲蓉蛋黄</button><button data-flavor="桂花豆沙" aria-pressed="false">桂花豆沙</button><button data-flavor="经典五仁" aria-pressed="false">经典五仁</button></div><button class="cake" id="cakeBite" aria-label="咬一口月饼" disabled>🥮</button><p class="fine" id="cakeHint">先选个口味，再点月饼尝一口。</p><div class="answer" id="cakeAnswer" aria-live="polite">偏爱的口味，就是今天的正确答案。</div></div></dialog>
+<dialog id="rest"><div class="inside center"><button class="close" aria-label="关闭休息礼物">×</button><p class="label">第二份 / 一点闲</p><h2>这六秒，留给自己。</h2><p>肩膀放松一点。<br>跟着圆圈，慢慢呼吸一次。</p><div class="breath"><div class="breath-circle" id="breathCircle">慢一点</div></div><button class="primary" id="restStart">开始我的小休息</button><p class="fine" id="restNote" aria-live="polite">不用赶，准备好了再开始。</p></div></dialog>
+<dialog id="wish"><div class="inside center"><button class="close" aria-label="关闭好运礼物">×</button><p class="label">第三份 / 一份好意</p><h2>抽一签，收下好心情。</h2><div class="final-icon">✧</div><div class="answer" id="wishAnswer" aria-live="polite">把一点期待，交给今晚的月亮。</div><button class="primary" id="drawWish">抽一份小好运</button><p class="fine">每一签，都是认真想送给你的祝福。</p></div></dialog>
+<dialog id="ending"><div class="inside center"><button class="close" aria-label="关闭最后的祝福">×</button><p class="label">最后一份 / 愿好事常常发生</p><div class="final-icon">🌕</div><h2>月饼有甜，假期有闲，<br>日子有盼头。</h2><p>愿你有人一起吃饭，<br>有时间做喜欢的事，<br>也有很多平凡却开心的瞬间。</p><p>思梅姐，中秋快乐。</p><button class="primary" id="confetti">把好心情带走 ✨</button><p class="fine" id="endingNote" aria-live="polite">这一份祝福，没有截止日期。</p></div></dialog><div class="toast" id="toast" role="status" hidden></div>
 <script>
-const wishes=[
-'愿今天的月饼，刚好是你喜欢的口味 🥮',
-'愿忙碌的日子里，总有属于自己的轻松时刻 ✨',
-'愿今晚有人陪你赏月，也有人惦记你开心 🌙',
-'愿接下来的日子，像今晚的月亮一样明亮 🌕'
-];
-const moon=document.getElementById('moon'),sheet=document.getElementById('sheet'),wish=document.getElementById('wish');
-const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let index=0;
-document.getElementById('open').addEventListener('click',()=>{
- sheet.classList.add('is-open');moon.disabled=false;
- document.getElementById('moonCaption').textContent='月亮还藏了几句祝福，点它看看';
- if(!reduced)sparkle(moon.getBoundingClientRect());
-});
-moon.addEventListener('click',()=>{wish.textContent=wishes[index++%wishes.length];if(!reduced)sparkle(moon.getBoundingClientRect())});
-function sparkle(rect){
- const cx=rect.left+rect.width/2,cy=rect.top+rect.height/2;
- for(let i=0;i<11;i++){
-  const s=document.createElement('i');s.className='spark';
-  const a=i*Math.PI*2/11,r=42+Math.random()*55;
-  s.style.left=cx+'px';s.style.top=cy+'px';
-  s.style.setProperty('--dx',Math.cos(a)*r+'px');
-  s.style.setProperty('--dy',Math.sin(a)*r+'px');
-  document.body.appendChild(s);s.addEventListener('animationend',()=>s.remove());
- }
-}
-if(!reduced)for(let i=0;i<12;i++){
- const p=document.createElement('i');p.className='petal';
- p.style.left=Math.random()*100+'vw';
- p.style.animationDuration=9+Math.random()*8+'s';
- p.style.animationDelay=-Math.random()*16+'s';
- document.body.appendChild(p);
-}
-</script>
-</body>
-</html>
+const $=id=>document.getElementById(id), reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const collected=new Set();let moonClicks=0,flavor='',bites=0,draw=0,restTimers=[],audioCtx=null,musicTimer=null,notes=0,toastTimer;
+const fortunes=[['宜开心','愿今天的小烦恼，到今晚就悄悄散场。'],['宜团圆','愿喜欢的饭菜，和想见的人，都在身边。'],['宜顺心','愿认真做的事有好结果，平常的日子有好心情。'],['宜放松','愿你忙有所获，闲有所乐。'],['宜惊喜','愿好消息来得突然，快乐停留得久一点。'],['宜自在','愿你有热爱的事情，也有慢慢享受的时间。']];
+const deck=fortunes.slice().sort(()=>Math.random()-.5);
+function burst(x=innerWidth/2,y=innerHeight/2){if(reduced)return;for(let i=0;i<20;i++){const s=document.createElement('span');s.className='burst';s.textContent=i%3?'✦':'·';s.style.left=x+'px';s.style.top=y+'px';s.style.setProperty('--dx',(Math.random()-.5)*260+'px');s.style.setProperty('--dy',(Math.random()-.65)*250+'px');const active=document.querySelector('dialog[open]');(active||document.body).append(s);setTimeout(()=>s.remove(),1200)}}
+function toast(t){clearTimeout(toastTimer);$('toast').textContent=t;$('toast').hidden=false;toastTimer=setTimeout(()=>$('toast').hidden=true,3000)}
+function collect(key){if(collected.has(key))return;collected.add(key);document.querySelector('[data-gift="'+key+'"]').classList.add('done');$('progress').textContent='已收下 '+collected.size+' / 3 份小惊喜';if(collected.size===3){$('bonus').hidden=false;toast('三份都拆开了，页面下方还有最后一份小礼物。')}}
+function open(id){$(id).showModal()}function stopRest(){restTimers.forEach(clearTimeout);restTimers=[];$('breathCircle').classList.remove('breathing');$('breathCircle').textContent='慢一点';$('restStart').disabled=false}
+document.querySelectorAll('dialog').forEach(d=>{d.querySelectorAll('.close,[data-close]').forEach(b=>b.onclick=()=>d.close());d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}})});$('rest').addEventListener('close',stopRest);
+$('openLetter').onclick=()=>open('letter');document.querySelectorAll('[data-gift]').forEach(b=>b.onclick=()=>open(b.dataset.gift));$('bonus').onclick=()=>open('ending');
+$('moon').onclick=e=>{moonClicks++;const lines=['今晚的月亮，先替我说一句：中秋快乐。','又发现你啦。再点一下，还有一句悄悄话。','隐藏祝福：愿你被生活温柔以待，也记得对自己好一点。'];$('moonNote').textContent=lines[(moonClicks-1)%3];burst(e.clientX||innerWidth/2,e.clientY||180);if(moonClicks===3)toast('找到月亮藏着的祝福了 ✨')};
+$('flavors').querySelectorAll('button').forEach(b=>b.onclick=()=>{flavor=b.dataset.flavor;bites=0;$('cakeBite').disabled=false;$('cakeBite').textContent='🥮';$('cakeBite').style.opacity=1;$('cakeHint').textContent='这块'+flavor+'是你的，点它尝一口。';$('cakeAnswer').textContent='月饼已备好，快乐也准备就绪。';$('flavors').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)))});
+$('cakeBite').onclick=e=>{bites++;if(bites===1){$('cakeBite').textContent='🥮';$('cakeBite').style.opacity=.7;$('cakeAnswer').textContent=flavor==='经典五仁'?'懂得欣赏五仁的人，总能发现生活里丰富的滋味。':flavor==='桂花豆沙'?'一点桂花香，一点豆沙甜。愿今天的好心情刚刚好。':'咸甜都刚好。愿日子有滋有味，也有你喜欢的小满足。';$('cakeHint').textContent='再来一口？还有一点小惊喜。';collect('cake')}else{$('cakeBite').textContent='✨';$('cakeBite').disabled=true;$('cakeAnswer').textContent='彩蛋：这一口附赠一份好心情。愿快乐多一点，烦恼少一点。';$('cakeHint').textContent='吃完啦。也可以换个口味，重新尝尝。';burst(e.clientX,e.clientY)}};
+$('restStart').onclick=()=>{stopRest();$('restStart').disabled=true;$('breathCircle').classList.add('breathing');$('breathCircle').textContent='慢慢吸气';$('restNote').textContent='先把手边的事放一放。';restTimers.push(setTimeout(()=>$('breathCircle').textContent='轻轻呼气',3000),setTimeout(()=>{$('breathCircle').classList.remove('breathing');$('breathCircle').textContent='刚刚好';$('restNote').textContent='休息也很值得。愿你的假期，多一点这样的轻松。';$('restStart').disabled=false;$('restStart').textContent='再休息一小会儿';collect('rest')},6000))};
+$('drawWish').onclick=()=>{const f=deck[draw++%deck.length];$('wishAnswer').replaceChildren();const div=document.createElement('div');const strong=document.createElement('strong');strong.textContent=f[0];const p=document.createElement('div');p.textContent=f[1];div.append(strong,p);$('wishAnswer').append(div);$('drawWish').textContent='再抽一签';collect('wish')};
+$('confetti').onclick=e=>{burst(e.clientX,e.clientY);$('endingNote').textContent='好心情已打包。愿你带着它，过一个温暖的中秋。'};
+if(!reduced){for(let i=0;i<45;i++){const s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*5+'s';$('sky').append(s)}}
+function stopMusic(){clearInterval(musicTimer);musicTimer=null;if(audioCtx)audioCtx.suspend();$('sound').setAttribute('aria-pressed','false');$('sound').textContent='♫ 开启轻音乐'}
+$('sound').onclick=async()=>{if(musicTimer){stopMusic();return}try{audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();await audioCtx.resume();const melody=[261.63,329.63,392,523.25,440,392,329.63,293.66];function play(){const o=audioCtx.createOscillator(),g=audioCtx.createGain(),t=audioCtx.currentTime;o.type='sine';o.frequency.value=melody[notes++%melody.length];g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.035,t+.05);g.gain.exponentialRampToValueAtTime(.0001,t+2);o.connect(g);g.connect(audioCtx.destination);o.start(t);o.stop(t+2);o.onended=()=>{o.disconnect();g.disconnect()}}play();musicTimer=setInterval(play,1100);$('sound').setAttribute('aria-pressed','true');$('sound').textContent='♫ 关闭轻音乐'}catch{toast('暂时无法播放声音，其他小惊喜照常打开。')}};
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&musicTimer)stopMusic()});
+</script></body></html>
